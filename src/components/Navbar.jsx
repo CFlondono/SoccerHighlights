@@ -3,7 +3,7 @@ function Navbar(){
         <nav>
             <a href="/">Home</a>
             <a href="/matches">Matches</a>
-            <a href="/highlights">Highlights</a>
+            {/* <a href="/highlights">Highlights</a> */}
         </nav>
     )
 }

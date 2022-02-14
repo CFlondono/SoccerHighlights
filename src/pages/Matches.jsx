@@ -1,33 +1,24 @@
-import { useEffect, useState } from 'react';
 
-function Matches(){
-    const [ matches, setMatches] = useState([])
-    let URL = 'https://www.scorebat.com/video-api/v3/'
-    let matchesObj = {}
+function Matches(props){
+    // function createMarkup(match) {
+    //     return {__html: match.videos[0].embed};
+    //   }
+    
+    const allMatches = props.matches.map((match,idx) => {
+        return(
+            <div className='card' key={idx}>
+                <h5>Match:{match.title}</h5>
+                <h6>Date:{match.date}</h6>
+                {/* <div dangerouslySetInnerHTML={createMarkup(match)}> */}
+                {/* </div> */}
+            </div>
+        )
+    })
+ return (
+            <section className='container'>
+                    {allMatches}
 
-  useEffect(
-    () =>{
-      fetch(URL)
-      .then(res => res.json())
-      .then((json) =>{
-          setMatches(json)
-        //   console.log(matches)
-      }).catch(error =>{
-          console.log(error)
-      })
-    }, []);
-    return (
-        <section className='container'>
-            {/* {matches.map((match =>{
-                return (
-                    <div className="card">
-                        <
-                    </div>
-                )
-            }))} */}
-
-           <p>This is the page to show the soccer matches</p>
-        </section>
+            </section>
     )
 }
 export default Matches
