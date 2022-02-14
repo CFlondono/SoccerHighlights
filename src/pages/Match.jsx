@@ -8,8 +8,7 @@ function Match(props){
 
     function createMarkup() {
         console.log(props.matches)
-        return {
-            __html: props.matches[index].videos[0].embed};
+        return {__html: props.matches[index].videos[0].embed};
       }
     
  return (
