@@ -1,13 +1,12 @@
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Matches from './pages/Matches';
-import Match from './components/Match';
+import Match from './pages/Match';
 import Highlights from './pages/Highlights';
 import { Route, Routes } from 'react-router-dom'
 import './App.css';
 import { useEffect, useState } from 'react';
-
-
+import Competitions from './pages/Competitions';
 
 function App() {  
 
@@ -31,39 +30,32 @@ function App() {
   []);
   const createCompetitions = () => {
     let arrayCompetitions = [];
-    // let count = 0;
-    // let sameCompetition = false;
     for(let i = 0; i < matches.length; i++){
-    // if the matches[] is unique, then add it to the competitions array  
-      // for (let j=0; j < arrayCompetitions.length; j++){
-      //   if (matches[i] === arrayCompetitions[j]) {
-      //     sameCompetition = true;
-      //   }
-      // }
-      // if (arrayCompetitions.includes(arrayCompetitions[i]) == false) {
-      //   count++;
-      //   if (count == 1 && sameCompetition == false){
           arrayCompetitions.push(matches[i].competition)
-      //   }
-      //   count = 0
       }
         const uniqueCompetition = [...new Set(arrayCompetitions)];
         console.log(uniqueCompetition)
-    //add the array into the state variable competition  
-    // setCompetitions(arrayCompetitions)
+    setCompetitions(arrayCompetitions)
   }
-
-  createCompetitions()
-
+  useEffect(
+    () =>{
+      createCompetitions() 
+    }, 
+  [matches]
+  );
   return (
     <div className="App">
+      {/* <img src= "/images/golazo.png" alt="logo"/> */}
       <h3>Soccer Matches Around World</h3>
       <Navbar />
+      <Competitions/>
+      <br></br>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/matches" element={<Matches matches={matches}/>} />
         <Route path="/highlights" element={<Highlights matches={matches}/>} />
-        <Route path="/match-details" element={ <Match /> }/>
+        <Route path="/match-details/:index" element={ <Match matches={matches}/> }/>
+        {/* <Route path="/competitions/" element={ <Competitions matches={competitions}/> }/> */}
       </Routes>
     </div>
   )
