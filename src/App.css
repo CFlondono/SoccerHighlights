@@ -2,34 +2,85 @@
   text-align: center;
 }
 body{
-  background-color: rgba(243, 240, 240, 0.719);
+  background-color: rgb(198, 190, 190);
 }
 nav a {
   padding: 2vw;
 }
+a {
+  text-decoration: none;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color:rgba(52, 47, 47, 0.721);
+}
 h5 {
+  font-size: 16px;
+  color: white;
 }
 h6 {
+  color: white;
 }
+/* .container {
+  display: inline-grid;
+  grid-template-rows: 100px 100px 100px 100px;
+  column-gap: 10px;
+  row-gap: 15px;
+  justify-items: center;
+  align-items: center;
+
+}   */
 
 .container {
-  display: inline-grid;
+  display: flex;
+  flex-flow: column; 
+  justify-content: center;
 }
 .card {
-  /* background-image: url('/images/game_banner.png'); */
-  background-repeat: no-repeat;
-  border: 1px solid rgb(14, 13, 13);
-  border-radius: 1rem;
-  display: grid;
-  grid-template-rows: 2fr 1fr;
-  height:130px
+  background-color: rgb(176, 192, 129);
+  align-self: center;
+  box-shadow: 0 4px 8px 0 #161615;
+  transition: 0.3s;
+  width: 50%;
+  height: 40%;
+  margin: 5px;
 }
+.competition_title{  
+  width:100%;
+  color:rgba(52, 47, 47, 0.721);
+}
+.match{
+  /* display: grid;
+  grid-template-columns: 50px 50px; */
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content:space-around;
+  background-color: black;
+} 
+.match_info{
+  background-color: black;
+  text-align: right;
+  padding: 10px;
+  
+}
+.thumbnail{
+  background-color: black;
+  padding: 5px;
+}
+img {
+  max-height: 150px;
+  /* min-width: 100%; */
+  object-fit: cover;
+  vertical-align: top;
+  border-radius: 5px;
+}
+
 .video {
   
 }
 .iframe-container{
   position: relative;
-  width: 100%;
+  width: 150%;
   padding-bottom: 56.25%; 
   height: 0;
 }

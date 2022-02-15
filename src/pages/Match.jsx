@@ -15,11 +15,18 @@ function Match(props){
         <section className='container'>
             <div className='card'>
                 <h1>{props.matches[index].videos[0].title}</h1>
+                <h2>Match: {props.matches[index].title}</h2>
                     <div iframe-container>
                         <div dangerouslySetInnerHTML={createMarkup()}>
                         </div>
                     </div>
             </div>
+            <div className="more_info">
+                    <h2>Competition: {props.matches[index].competition}</h2>
+                    <h3>Whatch the match: {props.matches[index].matchviewUrl}</h3>
+                    <h3>For the competition information: {props.matches[index].matchviewUrl}</h3>
+                </div>
+
         </section>
     )
 }

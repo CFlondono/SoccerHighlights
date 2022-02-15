@@ -1,7 +1,7 @@
 function Home(){
     return (
         <div>
-           <p>This is the Home Page</p>
+           <p>This app lists all the latest soccer matches played around the world</p>
         </div>
     )
 }

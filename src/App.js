@@ -45,17 +45,14 @@ function App() {
   );
   return (
     <div className="App">
-      {/* <img src= "/images/golazo.png" alt="logo"/> */}
-      <h3>Soccer Matches Around World</h3>
       <Navbar />
-      <Competitions/>
       <br></br>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/matches" element={<Matches matches={matches}/>} />
         <Route path="/highlights" element={<Highlights matches={matches}/>} />
         <Route path="/match-details/:index" element={ <Match matches={matches}/> }/>
-        {/* <Route path="/competitions/" element={ <Competitions matches={competitions}/> }/> */}
+        <Route path="/competitions/" element={ <Competitions matches={competitions}/> }/>
       </Routes>
     </div>
   )

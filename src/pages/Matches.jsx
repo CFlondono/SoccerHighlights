@@ -8,13 +8,23 @@ function Matches(props){
 
     const allMatches = props.matches.map((match,idx) => {
         return(
-            <div className='card' key={idx}>
-                <Link to ={`/match-details/${idx}`} key={idx}>See details</Link>
-                <h5>Match:{match.title}</h5>
-                <h6>Date:{match.date}</h6>
-                {/* <div dangerouslySetInnerHTML={createMarkup(match)}> */}
-                {/* </div> */}
-            </div>
+        //    <div className="container" key={idx}>
+                <div className="card" key={idx}>
+                    <div className="competition_title">
+                        <h2>Competition - {match.competition}</h2>
+                    </div>
+                    <div className="match">
+                        <div className="match_info">
+                            <h5>Match: {match.title}</h5>
+                            <h6>Date: {match.date}</h6>
+                        </div>
+                        <div className="thumbnail">    
+                            <img src={match.thumbnail}/>
+                        </div>
+                    </div>
+                    <Link to ={`/match-details/${idx}`} key={idx}><h3>Check out the Highlights for this match</h3></Link>
+                </div>
+            // </div>
         )
     })
  return (
