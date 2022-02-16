@@ -52,7 +52,8 @@ function App() {
         <Route path="/matches" element={<Matches matches={matches}/>} />
         <Route path="/highlights" element={<Highlights matches={matches}/>} />
         <Route path="/match-details/:index" element={ <Match matches={matches}/> }/>
-        {/* <Route path="/competitions/" element={ <Competitions matches={matches}/> }/> */}
+        <Route path="/competitions/" element={ <Competitions matches={matches}/> }/>
+        <Route path="/matches-competitions/" element={<Match matches={matches}/>}/>
       </Routes>
     </div>
   )
