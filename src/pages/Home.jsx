@@ -1,8 +1,10 @@
 function Home(){
     return (
-        <div>
-           <p>This app lists all the latest soccer matches played around the world</p>
-        </div>
+        <div className="container">
+            <div className="card">
+            <h1>The most recent best goals from around world</h1>
+            </div>
+        </div>    
     )
 }
 export default Home

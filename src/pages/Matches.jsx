@@ -13,6 +13,7 @@ function Matches(props){
                     <div className="competition_title">
                         <h2>Competition - {match.competition}</h2>
                     </div>
+                    <Link to ={`/match-details/${idx}`} key={idx}>
                     <div className="match">
                         <div className="match_info">
                             <h5>Match: {match.title}</h5>
@@ -22,11 +23,13 @@ function Matches(props){
                             <img src={match.thumbnail}/>
                         </div>
                     </div>
-                    <Link to ={`/match-details/${idx}`} key={idx}><h3>Check out the Highlights for this match</h3></Link>
+                    </Link>
+                    <Link to ={`/match-details/${idx}`} key={idx}><h3>Highlights for this match</h3></Link>
                 </div>
             // </div>
         )
-    })
+    }
+    ) 
  return (
             <section className='container'>
              {allMatches}
