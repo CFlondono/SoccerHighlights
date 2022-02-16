@@ -93,11 +93,13 @@ h6 {
 }
 .matches{
   background-color: black ;
+  padding-top: 10px;
   margin: 150;
   width: 50%;
 }
 .competitions{
   background-color: black ;
+  padding-top: 10px;
   margin: 150;
   width: 50%;
   height: 50%;

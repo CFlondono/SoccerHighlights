@@ -27,8 +27,8 @@ function Match(props){
             <div className="card">
                     <h2>Competition: {props.matches[index].competition}</h2>
                 
-                    <h3>Whatch the match: {props.matches[index].matchviewUrl}</h3>
-                    <h3>For the competition information: {props.matches[index].matchviewUrl}</h3>
+                    <a href={`${props.matches[index].matchviewUrl}`}  target="_blank"><h3>Whatch the complete match here</h3></a>
+                    <a href={`${props.matches[index].competitionUrl}`}  target="_blank"><h3>About the competition</h3></a>
                 </div>
 
         </section>
